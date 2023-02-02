@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #1D1D1D;
 }
 
 .container {
@@ -16,7 +17,8 @@ body {
   margin: 40px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 1px solid #363636;
+  background-color: #121212;
   padding: 30px;
   border-radius: 5px;
 }
