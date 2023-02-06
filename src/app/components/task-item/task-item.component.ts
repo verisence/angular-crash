@@ -1,7 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task';
-import { faDeleteLeft, faDemocrat } from '@fortawesome/free-solid-svg-icons';
-import { faDhl } from '@fortawesome/free-brands-svg-icons';
+import { faEraser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-item',
@@ -9,7 +8,17 @@ import { faDhl } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent {
-  @Input() task!: Task
-  faDelete = faDeleteLeft
+  @Input() task!: Task;
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
+  faDelete = faEraser;
+
+  onDelete(task: Task) {
+    this.onDeleteTask.emit(task);
+  }
+
+  onToggle(task: Task) {
+    this.onToggleReminder.emit(task);
+  }
 
 }
