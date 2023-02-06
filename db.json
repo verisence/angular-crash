@@ -23,6 +23,12 @@
       "text": "test",
       "day": "May 9th at 6:30pm",
       "reminder": true
+    },
+    {
+      "text": "Tempora fugit ut en",
+      "day": "5",
+      "reminder": false,
+      "id": 5
     }
   ]
 }
